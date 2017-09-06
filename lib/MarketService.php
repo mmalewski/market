@@ -286,9 +286,10 @@ class MarketService {
 			throw new \Exception("Installing apps is not supported because the app folder is not writable.");
 		}
 
-		if ($this->appManager->isShipped($appId)) {
+		if ($appId === 'market' || $this->appManager->isShipped($appId)) {
 			throw new AppManagerException($this->l10n->t('Shipped apps cannot be uninstalled'));
 		}
+
 		if (!\OC_App::removeApp($appId)) {
 			throw new AppManagerException($this->l10n->t('App (%s) could not be uninstalled. Please check the server logs.', $appId));
 		}
