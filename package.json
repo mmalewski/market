@@ -33,7 +33,7 @@
     "easygettext": "^2.6.4",
     "expose-loader": "0.7.3",
     "jquery": "3.2.1",
-    "less": "2.7.2",
+    "less": "2.7.3",
     "less-loader": "4.0.5",
     "node-sass": "^4.9.3",
     "npm-watch": "0.1.9",
